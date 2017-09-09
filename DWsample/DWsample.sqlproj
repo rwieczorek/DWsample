@@ -57,5 +57,18 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Security" />
+    <Folder Include="Auxiliary" />
+    <Folder Include="Auxiliary\Functions" />
+    <Folder Include="Auxiliary\Tables" />
+    <Folder Include="Auxiliary\Stored Procedures" />
+    <Folder Include="Auxiliary\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Security\Auxiliary.sql" />
+    <Build Include="Auxiliary\Tables\FeedStagingBatch.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Auxiliary\Tables\Feed.sql" />
   </ItemGroup>
 </Project>

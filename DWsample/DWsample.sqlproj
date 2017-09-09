@@ -63,12 +63,30 @@
     <Folder Include="Auxiliary\Tables" />
     <Folder Include="Auxiliary\Stored Procedures" />
     <Folder Include="Auxiliary\Views" />
+    <Folder Include="Staging" />
+    <Folder Include="Staging\Stored Procedures" />
+    <Folder Include="Production" />
+    <Folder Include="Production\Tables" />
+    <Folder Include="Production\Stored Procedures" />
+    <Folder Include="Production\Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Auxiliary.sql" />
-    <Build Include="Auxiliary\Tables\FeedStagingBatch.sql" />
+    <Build Include="Auxiliary\Tables\FeedBatch.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspAddFeedBatch.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspGetFeedByName.sql" />
+    <Build Include="Production\Tables\DimDate.sql" />
+    <Build Include="Production\Stored Procedures\uspPopulateDimDate.sql" />
+    <Build Include="Production\Tables\DimTime.sql" />
+    <Build Include="Production\Stored Procedures\uspPopulateDimTime.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Security\Staging.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Security\Production.sql" />
   </ItemGroup>
 </Project>

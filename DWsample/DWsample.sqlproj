@@ -64,11 +64,19 @@
     <Folder Include="Auxiliary\Stored Procedures" />
     <Folder Include="Auxiliary\Views" />
     <Folder Include="Staging" />
-    <Folder Include="Staging\Stored Procedures" />
     <Folder Include="Production" />
     <Folder Include="Production\Tables" />
     <Folder Include="Production\Stored Procedures" />
     <Folder Include="Production\Views" />
+    <Folder Include="Scripts" />
+    <Folder Include="Staging\Tables" />
+    <Folder Include="Staging\Stored Procedures" />
+    <Folder Include="Storage" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="Database Triggers" />
+    <Folder Include="Archive" />
+    <Folder Include="Archive\Tables" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Auxiliary.sql" />
@@ -79,6 +87,36 @@
     <Build Include="Production\Stored Procedures\uspPopulateDimDate.sql" />
     <Build Include="Production\Tables\DimTime.sql" />
     <Build Include="Production\Stored Procedures\uspPopulateDimTime.sql" />
+    <Build Include="Production\Tables\DimAudit.sql" />
+    <Build Include="Auxiliary\Tables\FeedBatchLoad.sql" />
+    <Build Include="Auxiliary\Tables\Load.sql" />
+    <Build Include="Auxiliary\Tables\Stage.sql" />
+    <Build Include="Auxiliary\Tables\Step.sql" />
+    <Build Include="Auxiliary\Tables\LoadError.sql" />
+    <Build Include="Auxiliary\Tables\FeedBatchLog.sql" />
+    <Build Include="Auxiliary\Tables\FeedComplexValidationTask.sql" />
+    <Build Include="Auxiliary\Tables\Field.sql" />
+    <Build Include="Auxiliary\Tables\FieldDecode.sql" />
+    <Build Include="Auxiliary\Tables\FieldDestination.sql" />
+    <Build Include="Auxiliary\Tables\ValidationType.sql" />
+    <Build Include="Auxiliary\Tables\ValidationFailureAction.sql" />
+    <Build Include="Auxiliary\Tables\FeedBatchError.sql" />
+    <Build Include="Staging\Tables\Customer.sql" />
+    <Build Include="Storage\CustomerPF.sql" />
+    <Build Include="dbo\Tables\DDLlog.sql" />
+    <Build Include="Auxiliary\Functions\fnQuoteNameStripSquareBrackets.sql" />
+    <Build Include="Auxiliary\Functions\fnStripNonNumericChars.sql" />
+    <Build Include="Auxiliary\Functions\fnStripNonAlphaNumChars.sql" />
+    <Build Include="Auxiliary\Functions\fnDateTimeColumnsEnumeratedByTable.sql" />
+    <Build Include="Auxiliary\Tables\DateTimeKeyDestination.sql" />
+    <Build Include="Auxiliary\Functions\fnFeedDecodesEnumeratedByTable.sql" />
+    <Build Include="Storage\SecondaryIndex.sql" />
+    <Build Include="Storage\Archive.sql" />
+    <Build Include="Storage\PrimaryIndex.sql" />
+    <None Include="Scripts\Auxiliary.ValidationType.sql" />
+    <Build Include="Storage\CustomerArchivePS.sql" />
+    <Build Include="Archive\Tables\Customer.sql" />
+    <Build Include="Security\Archive.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />
@@ -88,5 +126,20 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Production.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Auxiliary.Stage.sql" />
+    <None Include="Scripts\Auxiliary.Step.sql" />
+    <Build Include="Storage\CustomerPS.sql" />
+    <Build Include="Database Triggers\logSchemaChange.sql" />
+    <Build Include="Storage\Secondary.sql" />
+    <Build Include="Storage\CustomerArchivePF.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">
+      <HintPath>$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac</HintPath>
+      <SuppressMissingDependenciesErrors>False</SuppressMissingDependenciesErrors>
+      <DatabaseVariableLiteralValue>master</DatabaseVariableLiteralValue>
+    </ArtifactReference>
   </ItemGroup>
 </Project>

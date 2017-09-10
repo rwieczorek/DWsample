@@ -117,6 +117,7 @@
     <Build Include="Storage\CustomerArchivePS.sql" />
     <Build Include="Archive\Tables\Customer.sql" />
     <Build Include="Security\Archive.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspAddFeedBatchError.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />

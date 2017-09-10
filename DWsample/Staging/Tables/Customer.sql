@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [Staging].[Customer] (
-    [FeedBatchKey]  INT            NOT NULL,
+    [FeedBatchKey] INT            NOT NULL,
     [RowNumber]    INT            NOT NULL,
     [Title]        NVARCHAR (MAX) NULL,
     [Forename]     NVARCHAR (MAX) NULL,
@@ -30,10 +30,10 @@
 	SourceKey	SMALLINT NULL,
 	AuditKey	INT NULL,
 	RecordRejected	BIT	DEFAULT(0)	NOT NULL,
-	--CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED ([FeedBatchKey] ASC, [RowNumber] ASC) ON [CustomerPS] ([FeedBatchKey])
+	CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED ([FeedBatchKey] ASC, [RowNumber] ASC) ON [CustomerPS] ([FeedBatchKey])
 	--cannot cluster on FeedBatchKey/RowNumber if there will be parallel inserts to the same staging table!
 );
 
 
 GO
---ALTER TABLE [Staging].[Customer] SET (LOCK_ESCALATION = AUTO);
+ALTER TABLE [Staging].[Customer] SET (LOCK_ESCALATION = AUTO);

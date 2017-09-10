@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [Archive].[Customer] (
-    [FeedFileKey]  INT            NOT NULL,
+    [FeedBatchKey]  INT            NOT NULL,
     [RowNumber]    INT            NOT NULL,
     [Title]        NVARCHAR (MAX) NULL,
     [Forename]     NVARCHAR (MAX) NULL,
@@ -30,7 +30,7 @@
 	SourceKey	SMALLINT NULL,
 	AuditKey	INT NULL,
 	RecordRejected	BIT	DEFAULT(0)	NOT NULL,
-    CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED ([FeedFileKey] ASC, [RowNumber] ASC) WITH (DATA_COMPRESSION = PAGE ON PARTITIONS (1), DATA_COMPRESSION = PAGE ON PARTITIONS (2), DATA_COMPRESSION = PAGE ON PARTITIONS (3)) ON [CustomerArchivePS] ([FeedFileKey])
+    CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED ([FeedBatchKey] ASC, [RowNumber] ASC) WITH (DATA_COMPRESSION = PAGE ON PARTITIONS (1), DATA_COMPRESSION = PAGE ON PARTITIONS (2), DATA_COMPRESSION = PAGE ON PARTITIONS (3)) ON [CustomerArchivePS] ([FeedBatchKey])
 );
 
 

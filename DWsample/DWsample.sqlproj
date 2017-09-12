@@ -14,7 +14,7 @@
     </RootPath>
     <RootNamespace>DWsample</RootNamespace>
     <AssemblyName>DWsample</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -23,6 +23,10 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <Recovery>SIMPLE</Recovery>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>True</ReadCommittedSnapshot>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -119,6 +123,14 @@
     <Build Include="Security\Archive.sql" />
     <Build Include="Auxiliary\Stored Procedures\uspAddFeedBatchError.sql" />
     <Build Include="Auxiliary\Stored Procedures\uspUpdateFeedBatchLog.sql" />
+    <Build Include="Auxiliary\Views\FeedBatchMessages.sql" />
+    <Build Include="Auxiliary\Views\PartitionsOnClusteredIndexes.sql" />
+    <Build Include="Auxiliary\Tables\LoadLog.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspAddLoadLog.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspAddLoadError.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspUpdateLoadLog.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspSetFeedBatchProcessedToStagingCompleted.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspAddFeedBatchLog.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />

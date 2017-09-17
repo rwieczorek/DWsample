@@ -135,6 +135,7 @@
     <Build Include="Staging\Tables\FeedExampleOne.sql" />
     <Build Include="Production\Tables\DimSource.sql" />
     <Build Include="Production\Tables\FactExampleOne.sql" />
+    <Build Include="Auxiliary\Tables\FeedBatchRecordError.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />

@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [Staging].[FeedExampleOne] (
     [FeedBatchKey] INT            NOT NULL,
     [RowNumber]    INT            NOT NULL,
-    [BusinessID]   INT            NOT NULL,
-    [Date]         DATE           NULL,
-    [Value]        DECIMAL (18,2) NULL,
+    [BusinessID]   NVARCHAR (MAX) NULL,
+    [Date]         NVARCHAR (MAX) NULL,
+    [Value]        NVARCHAR (MAX) NULL,
     SourceKey	   TINYINT        NULL,
 	AuditKey	   INT            NULL,
 	RecordRejected	BIT	DEFAULT(0)	NOT NULL

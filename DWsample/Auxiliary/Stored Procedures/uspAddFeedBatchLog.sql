@@ -12,8 +12,8 @@ Parameters	@FeedBatchKey
 				Name of fine grained audit trace
 			@Detail
 				Any supporting detail
-			@FeedFileLogKey
-				Output parameter, returns the unique identifier of feed file log instance
+			@FeedBatchLogKey
+				Output parameter, returns the unique identifier of feed batch log instance
 
 Date			Author				Reason
 -------------------------------------------
@@ -26,7 +26,7 @@ CREATE PROCEDURE Auxiliary.uspAddFeedBatchLog
 	,@Container NVARCHAR(300)
 	,@Trace NVARCHAR(1000) = NULL
 	,@Detail NVARCHAR(1000) = NULL
-	,@FeedFileLogKey INT OUTPUT
+	,@FeedBatchLogKey INT OUTPUT
 
 AS
 SET NOCOUNT ON;
@@ -36,7 +36,7 @@ DECLARE
 
 BEGIN TRY
 
-	DECLARE @OutputT TABLE (FeedFileLogKey INT);
+	DECLARE @OutputT TABLE (FeedBatchLogKey INT);
 	
 	INSERT INTO	Auxiliary.FeedBatchLog
 	        ( FeedBatchKey ,
@@ -59,7 +59,7 @@ BEGIN TRY
 	          NULL  -- CompletedAt - datetime2
 	        )
 
-	SELECT @FeedFileLogKey = FeedFileLogKey
+	SELECT @FeedBatchLogKey = FeedBatchLogKey
 	FROM @OutputT
 
 END TRY

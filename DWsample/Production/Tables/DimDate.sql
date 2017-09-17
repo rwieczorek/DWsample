@@ -114,8 +114,4 @@ CREATE UNIQUE NONCLUSTERED INDEX [IX_Production_DimDate_DateKey_TheDate]
     ON [Production].[DimDate]([DateKey] ASC, [TheDate] ASC);
 
 GO
-CREATE NONCLUSTERED INDEX [IX_Production_DimDate_FiscalYearNumber_Include_TheDate]
-    ON [Production].[DimDate] (FiscalYearNumber DESC)
-	INCLUDE ([TheDate]);
 
-GO

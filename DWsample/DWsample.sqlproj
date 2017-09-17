@@ -132,6 +132,9 @@
     <Build Include="Auxiliary\Stored Procedures\uspSetFeedBatchProcessedToStagingCompleted.sql" />
     <Build Include="Auxiliary\Stored Procedures\uspAddFeedBatchLog.sql" />
     <Build Include="Auxiliary\Stored Procedures\uspGetFeedList.sql" />
+    <Build Include="Staging\Tables\FeedExampleOne.sql" />
+    <Build Include="Production\Tables\DimSource.sql" />
+    <Build Include="Production\Tables\FactExampleOne.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />

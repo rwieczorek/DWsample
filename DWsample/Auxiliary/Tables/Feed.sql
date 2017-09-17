@@ -10,6 +10,7 @@
     --[FieldDelimiter]    VARBINARY (10) NULL,
     --[RowDelimiter]      VARBINARY (10) NULL,
     [LoadToStaging]     BIT NOT NULL DEFAULT 1,
+	[IsActive]          BIT NOT NULL DEFAULT 1,
     --[LoadToDTV]			BIT NOT NULL DEFAULT 0,
     --[NeedsXMLFlatten]	BIT NOT NULL DEFAULT 0,
 	[HierarchyRank]		TINYINT NULL,

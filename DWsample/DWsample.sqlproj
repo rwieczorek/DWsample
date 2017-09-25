@@ -136,6 +136,9 @@
     <Build Include="Production\Tables\DimSource.sql" />
     <Build Include="Production\Tables\FactExampleOne.sql" />
     <Build Include="Auxiliary\Tables\FeedBatchRecordError.sql" />
+    <Build Include="Auxiliary\Views\vwFeedFieldDestinations.sql" />
+    <Build Include="Storage\FeedExampleOnePF.sql" />
+    <Build Include="Storage\FeedExampleOnePS.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />
@@ -153,6 +156,8 @@
     <Build Include="Database Triggers\logSchemaChange.sql" />
     <Build Include="Storage\Secondary.sql" />
     <Build Include="Storage\CustomerArchivePF.sql" />
+    <None Include="Scripts\Auxiliary.Field.sql" />
+    <None Include="Scripts\Auxiliary.FieldDestination.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">

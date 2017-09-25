@@ -7,7 +7,7 @@
     SourceKey	   TINYINT        NULL,
 	AuditKey	   INT            NULL,
 	RecordRejected	BIT	DEFAULT(0)	NOT NULL
-	--CONSTRAINT [PK_FeedExampleOne] PRIMARY KEY CLUSTERED ([FeedBatchKey] ASC, [RowNumber] ASC) ON [CustomerPS] ([FeedBatchKey])
+	CONSTRAINT [PK_FeedExampleOne] PRIMARY KEY CLUSTERED ([FeedBatchKey] ASC, [RowNumber] ASC) ON [FeedExampleOnePS] ([FeedBatchKey])
 	--cannot cluster on FeedBatchKey/RowNumber if there will be parallel inserts to the same staging table!
 );
 

@@ -18,7 +18,7 @@ Date			Author				Reason
 2017-09-10		Robert Wieczorek	Creation
 
 ==================================================================================*/ 
-CREATE PROCEDURE [Auxiliary].[uspUpdateFeedFileLog]
+CREATE PROCEDURE [Auxiliary].[uspUpdateFeedBatchLog]
 	@FeedBatchLogKey INT 
 	,@Container NVARCHAR(300) = NULL
 	,@Trace NVARCHAR(1000) = NULL

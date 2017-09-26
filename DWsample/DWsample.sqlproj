@@ -139,6 +139,9 @@
     <Build Include="Auxiliary\Views\vwFeedFieldDestinations.sql" />
     <Build Include="Storage\FeedExampleOnePF.sql" />
     <Build Include="Storage\FeedExampleOnePS.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspGetStepByName.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspSplitPartitionFunctionForTable.sql" />
+    <Build Include="Staging\Stored Procedures\uspCleanFeedExampleOneValues.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />

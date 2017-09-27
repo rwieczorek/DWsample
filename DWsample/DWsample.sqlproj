@@ -142,6 +142,7 @@
     <Build Include="Auxiliary\Stored Procedures\uspGetStepByName.sql" />
     <Build Include="Auxiliary\Stored Procedures\uspSplitPartitionFunctionForTable.sql" />
     <Build Include="Staging\Stored Procedures\uspCleanFeedExampleOneValues.sql" />
+    <Build Include="Auxiliary\Stored Procedures\uspSetDateTimeKeysByFeedBatchKey.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />

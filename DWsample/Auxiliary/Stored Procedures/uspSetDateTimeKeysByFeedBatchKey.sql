@@ -82,7 +82,7 @@ BEGIN
 		LEFT JOIN Production.DimDate
 			ON TRY_CONVERT(DATE, REPLACE(REPLACE(' + @Table + '.' + @DateTimeColumn + ', ''-'', ''''), ''T'', '' '')) = DimDate.TheDate
 	WHERE 
-		' + @KeyColumn + ' IS NULL'
+		' + @Table + '.' + @KeyColumn + ' IS NULL'
 END
 ELSE IF @isTime = 1
 BEGIN
@@ -94,11 +94,11 @@ BEGIN
 		LEFT JOIN Production.DimTime
 			ON CAST(LEFT(TRY_CONVERT(TIME, REPLACE(REPLACE(' + @Table + '.' + @DateTimeColumn + ', ''-'', ''''), ''T'', '' '')), 5) AS TIME) = DimTime.TheTime
 	WHERE 
-		' + @KeyColumn + ' IS NULL'
+		' + @Table + '.' + @KeyColumn + ' IS NULL'
 END
 
 IF @FeedBatchKey IS NOT NULL
-	SET @SQL += NCHAR(13) + NCHAR(9) + NCHAR(9) + N'AND ' + @Table + '.FeedFileKey = ' + CAST(@FeedBatchKey AS NVARCHAR(10));
+	SET @SQL += NCHAR(13) + NCHAR(9) + NCHAR(9) + N'AND ' + @Table + '.FeedBatchKey = ' + CAST(@FeedBatchKey AS NVARCHAR(10));
 
 SET @SQL += N';';
 

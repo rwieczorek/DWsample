@@ -143,6 +143,13 @@
     <Build Include="Auxiliary\Stored Procedures\uspSplitPartitionFunctionForTable.sql" />
     <Build Include="Staging\Stored Procedures\uspCleanFeedExampleOneValues.sql" />
     <Build Include="Auxiliary\Stored Procedures\uspSetDateTimeKeysByFeedBatchKey.sql" />
+    <Build Include="Production\Tables\DimExampleOne.sql" />
+    <Build Include="Staging\Stored Procedures\uspLoadRedEyeOpens.sql" />
+    <Build Include="Staging\Stored Procedures\uspLoadRedEyeOpensDimensions.sql" />
+    <Build Include="Staging\Stored Procedures\uspLoadRedEyeOpensDimEmail.sql" />
+    <Build Include="Staging\Stored Procedures\uspSetRedEyeClicksDimensionKeys.sql" />
+    <Build Include="Staging\Stored Procedures\uspSetRedEyeClicksEmailDeliveryKey.sql" />
+    <Build Include="Staging\Stored Procedures\uspLoadRedEyeOpensFacts.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Auxiliary\Tables\Feed.sql" />
@@ -162,6 +169,7 @@
     <Build Include="Storage\CustomerArchivePF.sql" />
     <None Include="Scripts\Auxiliary.Field.sql" />
     <None Include="Scripts\Auxiliary.FieldDestination.sql" />
+    <None Include="Scripts\Auxiliary.DateTimeKeyDestination.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\130\SqlSchemas\master.dacpac">

@@ -4,6 +4,8 @@
     [BusinessID]   NVARCHAR (MAX) NULL,
     [Date]         NVARCHAR (MAX) NULL,
     [Value]        NVARCHAR (MAX) NULL,
+	DateKey        INT            NULL,
+	TimeKey        SMALLINT       NULL,
     SourceKey	   TINYINT        NULL,
 	AuditKey	   INT            NULL,
 	RecordRejected	BIT	DEFAULT(0)	NOT NULL
